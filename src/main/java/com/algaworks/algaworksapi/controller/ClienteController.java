@@ -4,7 +4,6 @@ import com.algaworks.algaworksapi.entidades.Cliente;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class ClienteController {
 
         var cliente1 = new Cliente();
         cliente1.setId(1L);
-        cliente1.setNome("James");
+        cliente1.setNome("Jame");
         cliente1.setEmail("james@gmail.com");
         cliente1.setTelefone("82981029294");
 
@@ -26,7 +25,13 @@ public class ClienteController {
         cliente2.setEmail("maria@gmail.com");
         cliente2.setTelefone("8198165165");
 
-        return Arrays.asList(cliente1, cliente2);
+        var cliente3 = new Cliente();
+        cliente3.setId(4L);
+        cliente3.setNome("sda");
+        cliente3.setEmail("joao mario");
+        cliente3.setTelefone("8198165165");
+
+        return Arrays.asList(cliente1, cliente2, cliente3);
     }
 
 }
